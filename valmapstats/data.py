@@ -3,7 +3,7 @@ import json
 from collections import namedtuple
 from urllib.parse import urlencode, urlunparse
 
-from config import MATCH_ENDPOINT
+from valmapstats.config import MATCH_ENDPOINT
 
 
 class PuuidException(Exception):
@@ -44,7 +44,7 @@ def get_request(game_mode: str, game_map: str, game_region: str, puuid: str) -> 
     :raises PuuidException: in case puuid is wrong
     :return: reponse dictionary
     """
-    url = get_url(**inputs)
+    url = get_url(game_mode, game_map, game_region, puuid)
     header = {"accept": "application/json"}
     try:
         response = requests.get(url, headers=header)
