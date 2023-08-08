@@ -1,0 +1,13 @@
+1. Useful datapoints from data.players
+ability casts, agent (needs to be mapped to an agent type), KDA
+
+
+2. data.teams
+has won 
+
+3. data.rounds
+winning_team
+plant_location, player_locations_on_plant, defuse_events
+player_stats
+kill_events, victim_death_location, victim_display_name, killer_team
+
